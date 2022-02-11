@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: artifact_app
-          path: ./node_modules
+          path: ./
 
   create-npm-package:
     needs: create-artifact
