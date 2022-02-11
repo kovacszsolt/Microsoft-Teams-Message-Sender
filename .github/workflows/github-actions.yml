@@ -15,6 +15,5 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@octocat'
       - name : set Version Number
-        run: npm version 1.0.${{github.run_number}}
-      - name: stash changes
-        run: git stash pop
+      - run: npm config set git-tag-version=false
+      - run: npm version 1.0.${{github.run_number}}
