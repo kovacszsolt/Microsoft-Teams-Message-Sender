@@ -1,7 +1,7 @@
 {
-  "name": "microsoft-teams-message-docker",
+  "name": "kovacszsolt/microsoft-teams-message-docker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Send message to The Microsoft Teams channel.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.nexius.work/kovacs.zsolt/webhook-server.git"
+    "url": "https://github.com/kovacszsolt/microsoft-teams-message-sender.git"
   },
   "author": "",
   "license": "ISC",
