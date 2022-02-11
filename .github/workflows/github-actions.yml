@@ -9,11 +9,17 @@ jobs:
       - name: install npm modules
         run: npm i
       - name: cache
+        env:
+          cache-name: cache-node-modules
         id: cache-packages
         uses: actions/cache@v2
         with:
-          key: cache-key
-          path: ./
+          key:  ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          path: node_modules
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
   create-npm-package:
     needs: create-artifact
