@@ -9,9 +9,9 @@ jobs:
       - name: install npm modules
         run: npm i
       - name: cache
+        id: cache-packages
         uses: actions/cache@v2
         with:
-          key: my-cache-key
           path: ./
 
   create-npm-package:
