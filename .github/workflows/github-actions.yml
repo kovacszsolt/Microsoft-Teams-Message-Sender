@@ -8,9 +8,9 @@ jobs:
         uses: actions/checkout@v2
       - name: install npm modules
         run: npm i
-#      - uses: actions/setup-node@v2
-#        with:
-#          node-version: '16.x'
-#          registry-url: 'https://registry.npmjs.org'
-#          scope: '@octocat'
-#        - run : npm version 1.0.$env:GITHUB_RUN_NUMBER%
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@octocat'
+        - run : npm version 1.0.$env:GITHUB_RUN_NUMBER%
