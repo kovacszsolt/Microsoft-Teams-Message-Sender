@@ -12,8 +12,8 @@ jobs:
         id: cache-primes
         uses: actions/cache@v2
         with:
-          path: app-files
-          key: app-files-cache
+          path: /node_modules
+          key: node_modules-cache
 
   create-npm-package:
     needs: create-artifact
