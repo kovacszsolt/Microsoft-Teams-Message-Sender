@@ -17,7 +17,7 @@ jobs:
         run: npm config set git-tag-version=false
       - run: npm version 1.0.${{github.run_number}}
       - name: Publish to npm
-        run : echo "//registry.npmjs.org/:_authToken=\$NPM_TOKEN" > .npmrc
+        run : echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
