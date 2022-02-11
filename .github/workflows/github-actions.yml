@@ -8,6 +8,13 @@ jobs:
         uses: actions/checkout@v2
       - name: install npm modules
         run: npm i
+      - name: cache
+        id: cache-primes
+        uses: actions/cache@v2
+        with:
+          path: app-files
+          key: app-files-cache
+
   create-npm-package:
     needs: create-artifact
     runs-on: ubuntu-latest
