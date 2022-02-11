@@ -1,5 +1,5 @@
 {
-  "name": "@kovacszsolt/microsoft-teams-message-docker",
+  "name": "kovacszsolt/microsoft-teams-message-docker",
   "version": "1.0.1",
   "description": "Send message to The Microsoft Teams channel.",
   "main": "index.js",
