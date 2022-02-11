@@ -9,15 +9,20 @@ jobs:
       - name: install npm modules
         run: npm i
       - name: cache
-        uses: actions/cache@v2
+        uses: actions/upload-artifact@v2
         with:
-          key: my-cache-key
+          name: my-artifact
           path: ./
 
   create-npm-package:
     needs: create-artifact
     runs-on: ubuntu-latest
     steps:
+      - name: get Data From Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+          path: ./
       - name: publish to npm
         uses: actions/setup-node@v2
         with:
