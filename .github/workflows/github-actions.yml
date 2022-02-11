@@ -20,11 +20,21 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact_app
+          path: ./node_modules
 
   create-npm-package:
     needs: create-artifact
     runs-on: ubuntu-latest
     steps:
+      - name: get Data From Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: artifact_app
+          path: ./
       - name: publish to npm
         uses: actions/setup-node@v2
         with:
