@@ -16,6 +16,7 @@ jobs:
       - name : set Version Number
         run: npm config set git-tag-version=false
       - run: npm version 1.0.${{github.run_number}}
-      - run: npm publish --access public
+      - name: Publish to npm
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
