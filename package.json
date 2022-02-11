@@ -1,0 +1,20 @@
+{
+  "name": "microsoft-teams-message-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.nexius.work/kovacs.zsolt/webhook-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "yargs": "^17.3.1"
+  }
+}
