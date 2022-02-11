@@ -15,4 +15,4 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@octocat'
       - name : set Version Number
-        run : npm version 1.0.$env:GITHUB_RUN_NUMBER%
+        run : npm version 1.0.$env:GITHUB_RUN_NUMBER
