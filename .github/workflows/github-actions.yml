@@ -9,6 +9,7 @@ jobs:
       - name: install npm modules
         run: npm i
   create-npm-package:
+    needs: create-artifact
     runs-on: ubuntu-latest
     steps:
       - name: publish to npm
