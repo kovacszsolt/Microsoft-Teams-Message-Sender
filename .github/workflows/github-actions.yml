@@ -18,6 +18,11 @@ jobs:
     needs: create-artifact
     runs-on: ubuntu-latest
     steps:
+      - name: get Data From Artifact
+        uses: actions/artifact@v2
+        with:
+          name: my-artifact
+          path: ./
       - name: publish to npm
         uses: actions/setup-node@v2
         with:
